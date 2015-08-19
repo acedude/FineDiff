@@ -1,7 +1,7 @@
 {
-    "name": "cogpowered/finediff",
+    "name": "acedude/finediff",
     "description": "PHP implementation of a Fine granularity Diff engine",
-    "homepage": "https://github.com/cogpowered/FineDiff",
+    "homepage": "https://github.com/acedude/FineDiff",
     "license": "MIT",
     "keywords": ["finediff", "diff", "text", "string", "opcode"],
     "authors": [
@@ -22,6 +22,6 @@
         "phpunit/phpunit": "*"
     },
     "autoload": {
-        "psr-0": { "cogpowered\\FineDiff": "src/" }
+        "psr-0": { "acedude\\FineDiff": "src/" }
     }
 }
