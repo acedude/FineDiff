@@ -20,26 +20,26 @@ namespace cogpowered\FineDiff\Render;
 
 use cogpowered\FineDiff\Parser\OpcodeInterface;
 
-class Html extends Renderer
-{
-    public function callback($opcode, $from, $from_offset, $from_len)
-    {
-        if ($opcode === 'c') {
-            $html = htmlentities(substr($from, $from_offset, $from_len));
-        } else if ($opcode === 'd') {
+class Html extends Renderer {
+	public function callback( $opcode, $from, $from_offset, $from_len ) {
+		if ( $opcode === 'c' ) {
+			$html = htmlentities( substr( $from, $from_offset, $from_len ) );
+		} else if ( $opcode === 'd' ) {
 
-            $deletion = substr($from, $from_offset, $from_len);
+			$deletion = substr( $from, $from_offset, $from_len );
 
-            if (strcspn($deletion, " \n\r") === 0) {
-                $deletion = str_replace(array("\n","\r"), array('\n','\r'), $deletion);
-            }
+			if ( strcspn( $deletion, " \n\r" ) === 0 ) {
+				$deletion = str_replace( array( "\n", "\r" ), array( '\n', '\r' ), $deletion );
+			}
 
-            $html = '<del>'.htmlentities($deletion).'</del>';
+			$html = '<del>' . htmlentities( $deletion ) . '</del>';
+			$html = str_replace( PHP_EOL, '</del>' . PHP_EOL . '<del>', $html );
 
-        } else /* if ( $opcode === 'i' ) */ {
-            $html = '<ins>'.htmlentities(substr($from, $from_offset, $from_len)).'</ins>';
-        }
+		} else /* if ( $opcode === 'i' ) */ {
+			$html = '<ins>' . htmlentities( substr( $from, $from_offset, $from_len ) ) . '</ins>';
+			$html = str_replace( PHP_EOL, '</ins>' . PHP_EOL . '<ins>', $html );
+		}
 
-        return $html;
-    }
+		return $html;
+	}
 }
