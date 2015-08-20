@@ -33,12 +33,10 @@ class Html extends Renderer {
 			}
 
 			$html = '<del>' . htmlentities( $deletion ) . '</del>';
-			$html = str_replace( "\r\n", PHP_EOL, $html );
 			$html = str_replace( PHP_EOL, '</del>' . PHP_EOL . '<del>', $html );
 
 		} else /* if ( $opcode === 'i' ) */ {
 			$html = '<ins>' . htmlentities( substr( $from, $from_offset, $from_len ) ) . '</ins>';
-			$html = str_replace( ["\r\n"], PHP_EOL, $html );
 			$html = str_replace( PHP_EOL, '</ins>' . PHP_EOL . '<ins>', $html );
 		}
 
