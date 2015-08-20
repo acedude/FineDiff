@@ -7,23 +7,23 @@
  * one string into another.
  *
  * Originally created by Raymond Hill (https://github.com/gorhill/PHP-FineDiff), brought up
- * to date by Cog Powered (https://github.com/cogpowered/FineDiff).
+ * to date by Cog Powered (https://github.com/acedude/FineDiff).
  *
  * @copyright Copyright 2011 (c) Raymond Hill (http://raymondhill.net/blog/?p=441)
- * @copyright Copyright 2013 (c) Robert Crowe (http://cogpowered.com)
- * @link https://github.com/cogpowered/FineDiff
+ * @copyright Copyright 2013 (c) Robert Crowe (http://acedude.com)
+ * @link https://github.com/acedude/FineDiff
  * @version 0.0.1
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-namespace cogpowered\FineDiff\Parser;
+namespace acedude\FineDiff\Parser;
 
-use cogpowered\FineDiff\Granularity\GranularityInterface;
-use cogpowered\FineDiff\Exceptions\GranularityCountException;
-use cogpowered\FineDiff\Parser\Operations\Copy;
-use cogpowered\FineDiff\Parser\Operations\Delete;
-use cogpowered\FineDiff\Parser\Operations\Insert;
-use cogpowered\FineDiff\Parser\Operations\Replace;
+use acedude\FineDiff\Granularity\GranularityInterface;
+use acedude\FineDiff\Exceptions\GranularityCountException;
+use acedude\FineDiff\Parser\Operations\Copy;
+use acedude\FineDiff\Parser\Operations\Delete;
+use acedude\FineDiff\Parser\Operations\Insert;
+use acedude\FineDiff\Parser\Operations\Replace;
 
 /**
  * Generates a set of instructions to convert one string to another.
@@ -31,12 +31,12 @@ use cogpowered\FineDiff\Parser\Operations\Replace;
 class Parser implements ParserInterface
 {
     /**
-     * @var cogpowered\FineDiff\GranularityInterface
+     * @var acedude\FineDiff\GranularityInterface
      */
     protected $granularity;
 
     /**
-     * @var cogpowered\FineDiff\Parser\OpcodesInterface
+     * @var acedude\FineDiff\Parser\OpcodesInterface
      */
     protected $opcodes;
 
@@ -51,7 +51,7 @@ class Parser implements ParserInterface
     protected $from_offset = 0;
 
     /**
-     * @var cogpowered\FineDiff\Operations\OperationInterface
+     * @var acedude\FineDiff\Operations\OperationInterface
      */
     protected $last_edit;
 

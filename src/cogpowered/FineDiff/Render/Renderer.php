@@ -7,18 +7,18 @@
  * one string into another.
  *
  * Originally created by Raymond Hill (https://github.com/gorhill/PHP-FineDiff), brought up
- * to date by Cog Powered (https://github.com/cogpowered/FineDiff).
+ * to date by Cog Powered (https://github.com/acedude/FineDiff).
  *
  * @copyright Copyright 2011 (c) Raymond Hill (http://raymondhill.net/blog/?p=441)
- * @copyright Copyright 2013 (c) Robert Crowe (http://cogpowered.com)
- * @link https://github.com/cogpowered/FineDiff
+ * @copyright Copyright 2013 (c) Robert Crowe (http://acedude.com)
+ * @link https://github.com/acedude/FineDiff
  * @version 0.0.1
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-namespace cogpowered\FineDiff\Render;
+namespace acedude\FineDiff\Render;
 
-use cogpowered\FineDiff\Parser\OpcodesInterface;
+use acedude\FineDiff\Parser\OpcodesInterface;
 use InvalidArgumentException;
 
 abstract class Renderer implements RendererInterface
@@ -27,7 +27,7 @@ abstract class Renderer implements RendererInterface
      * Covert text based on the provided opcodes.
      *
      * @param string                                              $from_text
-     * @param string|\cogpowered\FineDiff\Parser\OpcodesInterface $opcodes
+     * @param string|\acedude\FineDiff\Parser\OpcodesInterface $opcodes
      *
      * @return string
      */
